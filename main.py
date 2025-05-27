@@ -1,16 +1,14 @@
-# main.py
-
 import asyncio
-from pyrogram import Client
-from config import API_ID, API_HASH, BOT_TOKEN, PLUGINS
-from bot.handlers import start  # triggers on startup to load modules
+from pyrogram import Client, idle
+from config import Config
+from bot.handlers import start  # if this auto-loads handlers
 
 Bot = Client(
     "AdvancedFilterBot",
-    api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=BOT_TOKEN,
-    plugins={"root": PLUGINS}
+    api_id=Config.API_ID,
+    api_hash=Config.API_HASH,
+    bot_token=Config.BOT_TOKEN,
+    plugins={"root": "bot/handlers"}  # or Config.PLUGINS if added
 )
 
 async def main():
@@ -20,5 +18,4 @@ async def main():
     await Bot.stop()
 
 if __name__ == "__main__":
-    from pyrogram import idle
     asyncio.run(main())
