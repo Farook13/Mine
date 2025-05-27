@@ -3,7 +3,7 @@ import os
 class Config:
     API_ID = int(os.environ.get("API_ID", 12618934))
     API_HASH = os.environ.get("API_HASH", "49aacd0bc2f8924add29fb02e20c8a16")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7693803634:AAFIWfW8gfzMYv-G5-I9hAnge1mYFVkspio")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7955983025:AAECeT09wQ9ptCDnJ42YmKjy7rMSv9k4eiw")
     MONGO_URI = os.environ.get("MONGO_URI", "mongodb+srv://batman13:batman13@batman.sawvl.mongodb.net/?retryWrites=true&w=majority&appName=batman")
     DATABASE_NAME = os.environ.get("DATABASE_NAME", "TelegramBot")
 
