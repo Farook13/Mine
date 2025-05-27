@@ -1,1 +1,6 @@
-ggg
+pyrogram==2.0.106
+tgcrypto==1.2.5
+motor==3.4.0
+dnspython==2.4.2
+aiofiles==23.2.1
+python-dotenv==1.0.1
